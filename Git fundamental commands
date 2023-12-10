@@ -1,0 +1,104 @@
+/// Git add, push, pull, commit, log, ammennd etc
+
+appscodepc@appscodepc ~/D/G/programmer1 (main)> pwd
+/home/appscodepc/Desktop/Git_Code/programmer1
+appscodepc@appscodepc ~/D/G/programmer1 (main)> echo 'Second Commit' > second.md
+appscodepc@appscodepc ~/D/G/programmer1 (main)> code .
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	second.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git add second.md
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   second.md
+
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git commit -m 'Commit2:main add second.md'
+[main 092fdaa] Commit2:main add second.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 second.md
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git log
+commit 092fdaaf0edd6e72675c2cfc6b3bde0653d87e14 (HEAD -> main)
+Author: takiaesha <takia@appscode.com>
+Date:   Wed Dec 6 15:09:44 2023 +0600
+
+    Commit2:main add second.md
+
+commit 908c21e6c0056bcae6a6d35c18cdadc19610b861
+Author: takiaesha <takia@appscode.com>
+Date:   Wed Dec 6 14:53:18 2023 +0600
+
+    Commit1:main add first.md
+
+commit 8ada8d9d79dcda7f29c5d7d23d298aa7964ede3f (origin/main, origin/HEAD)
+Author: takia esha <75564829+takiaesha@users.noreply.github.com>
+Date:   Wed Dec 6 09:40:01 2023 +0600
+
+    Initial commit
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git log -p 092fdaaf0edd6e72675c2cfc6b3bde0653d87e14
+commit 092fdaaf0edd6e72675c2cfc6b3bde0653d87e14 (HEAD -> main)
+Author: takiaesha <takia@appscode.com>
+Date:   Wed Dec 6 15:09:44 2023 +0600
+
+    Commit2:main add second.md
+
+commit 092fdaaf0edd6e72675c2cfc6b3bde0653d87e14 (HEAD -> main)
+Author: takiaesha <takia@appscode.com>
+Date:   Wed Dec 6 15:09:44 2023 +0600
+
+    Commit2:main add second.md
+
+diff --git a/second.md b/second.md
+new file mode 100644
+index 0000000..27d1d8d
+--- /dev/null
++++ b/second.md
+@@ -0,0 +1 @@
++Second Commit
+
+commit 908c21e6c0056bcae6a6d35c18cdadc19610b861
+Author: takiaesha <takia@appscode.com>
+Date:   Wed Dec 6 14:53:18 2023 +0600
+
+    Commit1:main add first.md
+
+diff --git a/first.md b/first.md
+new file mode 100644
+index 0000000..70c6f85
+--- /dev/null
++++ b/first.md
+@@ -0,0 +1 @@
++First Git Commit Process
+
+commit 8ada8d9d79dcda7f29c5d7d23d298aa7964ede3f (origin/main, origin/HEAD)
+Author: takia esha <75564829+takiaesha@users.noreply.github.com>
+Date:   Wed Dec 6 09:40:01 2023 +0600
+
+    Initial commit
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..840e4a6
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,2 @@
++# Git_Commands
++Basic Git Commands
+

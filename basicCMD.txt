@@ -1,0 +1,54 @@
+# Git_Commands
+Basic Git Commands
+appscodepc@appscodepc:~$ pwd
+/home/appscodepc
+appscodepc@appscodepc:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+appscodepc@appscodepc:~$ cd ~/Desktop/Git_Code
+appscodepc@appscodepc:~/Desktop/Git_Code$ fish
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+appscodepc@appscodepc ~/D/Git_Code> git clone git@github.com:takiaesha/Git_Commands.git programmer1
+Cloning into 'programmer1'...
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+appscodepc@appscodepc ~/D/Git_Code> cd programmer1
+appscodepc@appscodepc ~/D/G/programmer1 (main)> ls -la
+total 16
+drwxrwxr-x 3 appscodepc appscodepc 4096 ডিসেম্বর   6 12:29 .
+drwxrwxr-x 3 appscodepc appscodepc 4096 ডিসেম্বর   6 12:27 ..
+drwxrwxr-x 8 appscodepc appscodepc 4096 ডিসেম্বর   6 12:29 .git
+-rw-rw-r-- 1 appscodepc appscodepc   34 ডিসেম্বর   6 12:29 README.md
+appscodepc@appscodepc ~/D/G/programmer1 (main)> la .git
+total 52K
+drwxrwxr-x 8 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:29 .
+drwxrwxr-x 3 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:29 ..
+drwxrwxr-x 2 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:27 branches
+-rw-rw-r-- 1 appscodepc appscodepc  262 ডিসেম্বর   6 12:29 config
+-rw-rw-r-- 1 appscodepc appscodepc   73 ডিসেম্বর   6 12:27 description
+-rw-rw-r-- 1 appscodepc appscodepc   21 ডিসেম্বর   6 12:29 HEAD
+drwxrwxr-x 2 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:27 hooks
+-rw-rw-r-- 1 appscodepc appscodepc  137 ডিসেম্বর   6 12:29 index
+drwxrwxr-x 2 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:27 info
+drwxrwxr-x 3 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:29 logs
+drwxrwxr-x 4 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:27 objects
+-rw-rw-r-- 1 appscodepc appscodepc  112 ডিসেম্বর   6 12:29 packed-refs
+drwxrwxr-x 5 appscodepc appscodepc 4.0K ডিসেম্বর   6 12:29 refs
+appscodepc@appscodepc ~/D/G/programmer1 (main)> cat .git/HEAD
+ref: refs/heads/main
+appscodepc@appscodepc ~/D/G/programmer1 (main)> pwd
+/home/appscodepc/Desktop/Git_Code/programmer1
+appscodepc@appscodepc ~/D/G/programmer1 (main)> git log
+commit 8ada8d9d79dcda7f29c5d7d23d298aa7964ede3f (HEAD -> main, origin/main, origin/HEAD)
+Author: takia esha <75564829+takiaesha@users.noreply.github.com>
+Date:   Wed Dec 6 09:40:01 2023 +0600
+
+    Initial commit
+appscodepc@appscodepc ~/D/G/programmer1 (main)> 
